@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
-export function DataFetcher(props: { kind: "hot" | "iced" }) {
+type DataFetcherProps = {
+  kind: "hot" | "iced";
+};
+
+export function DataFetcher({ kind }: DataFetcherProps) {
   const [data, setData] = useState<{ id: string; name: string }[] | null>(null);
 
   const fetchData = async () => {
-    const response = await fetch(
-      `https://api.sampleapis.com/coffee/${props.kind}`,
-    );
+    const response = await fetch(`https://api.sampleapis.com/coffee/${kind}`);
     const jsonData = await response.json();
     setData(jsonData);
   };

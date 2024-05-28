@@ -6,8 +6,11 @@ type User = {
   email: string;
 };
 
-export function UserList(props: { users: User[] }) {
-  const { users } = props;
+type UserListProps = {
+  users: User[];
+};
+
+export function UserList({ users }: UserListProps) {
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
 
   useEffect(() => {
