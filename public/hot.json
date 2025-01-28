@@ -1,0 +1,26 @@
+[
+  {
+    "id": "h1",
+    "name": "Espresso"
+  },
+  {
+    "id": "h2",
+    "name": "Americano"
+  },
+  {
+    "id": "h3",
+    "name": "Cappuccino"
+  },
+  {
+    "id": "h4",
+    "name": "Latte"
+  },
+  {
+    "id": "h5",
+    "name": "Macchiato"
+  },
+  {
+    "id": "h6",
+    "name": "Mocha"
+  }
+]

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type User = {
   id: string;
@@ -10,6 +10,17 @@ type UserListProps = {
   users: User[];
 };
 
+/**
+ * Filters a list of users by name provided as props via an input field contained
+ * within this component.
+ *
+ * First, code review this component. Do you understand every part of it? Can
+ * you catch eny issues or mistakes? Anything you would change or improve?
+ * If so -- why?
+ *
+ * Second, change the internal logic of this component to filter not just name,
+ * but by name and email, and make sure the search is case-insensitive.
+ */
 export function UserList({ users }: UserListProps) {
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
 
@@ -23,10 +34,9 @@ export function UserList({ users }: UserListProps) {
         type="text"
         placeholder="Search users by name or email"
         onChange={(e) => {
-          const searchTerm = e.target.value.toLowerCase();
           setFilteredUsers(
             users.filter((user) =>
-              user.name.toLowerCase().includes(searchTerm),
+              user.name.toLowerCase().includes(e.target.value),
             ),
           );
         }}

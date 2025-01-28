@@ -1,14 +1,23 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type DataFetcherProps = {
-  kind: "hot" | "iced";
+  kind: "hot" | "cold";
 };
 
+/**
+ * Fetches data from an API and presents it to the user.
+ *
+ * First, review the code to see if there are any issues of improvements you
+ * would make.
+ *
+ * Second, consider the UX of this component. How would you change it or
+ * improve it for a real-world product.
+ */
 export function DataFetcher({ kind }: DataFetcherProps) {
   const [data, setData] = useState<{ id: string; name: string }[] | null>(null);
 
   const fetchData = async () => {
-    const response = await fetch(`https://api.sampleapis.com/coffee/${kind}`);
+    const response = await fetch(`/${kind}.json`);
     const jsonData = await response.json();
     setData(jsonData);
   };

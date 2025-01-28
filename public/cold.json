@@ -1,0 +1,26 @@
+[
+  {
+    "id": "c1",
+    "name": "Iced Americano"
+  },
+  {
+    "id": "c2",
+    "name": "Cold Brew"
+  },
+  {
+    "id": "c3",
+    "name": "Iced Latte"
+  },
+  {
+    "id": "c4",
+    "name": "Frappuccino"
+  },
+  {
+    "id": "c5",
+    "name": "Nitro Cold Brew"
+  },
+  {
+    "id": "c6",
+    "name": "Iced Mocha"
+  }
+]
