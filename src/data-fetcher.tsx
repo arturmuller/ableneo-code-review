@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { fetch } from "./utils/slowFetch";
 
 type DataFetcherProps = {
   kind: "hot" | "cold";
